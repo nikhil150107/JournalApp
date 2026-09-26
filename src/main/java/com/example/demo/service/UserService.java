@@ -32,7 +32,7 @@ public class UserService {
 
         try{
             if(!isForJournal) {
-                user.setPassword(passwordEncoder.encode(user.getPassword()));
+                  user.setPassword(passwordEncoder.encode(user.getPassword()));
             }
             user.setRoles(Arrays.asList("USER"));
             userRepository.save(user);
